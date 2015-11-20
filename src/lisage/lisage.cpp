@@ -1,4 +1,4 @@
-// lisage.cpp : ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÌƒGƒ“ƒgƒŠ ƒ|ƒCƒ“ƒg‚ð’è‹`‚µ‚Ü‚·B
+// lisage.cpp : ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®ã‚¨ãƒ³ãƒˆãƒª ãƒã‚¤ãƒ³ãƒˆã‚’å®šç¾©ã—ã¾ã™ã€‚
 //
 
 #include "stdafx.h"
@@ -8,20 +8,20 @@
 #define MAX_LOADSTRING 100
 #define WM_TRAYICON		WM_APP
 
-// ƒOƒ[ƒoƒ‹•Ï”:
-HINSTANCE hInst;								// Œ»Ý‚ÌƒCƒ“ƒ^[ƒtƒFƒCƒX
-TCHAR szTitle[MAX_LOADSTRING];					// ƒ^ƒCƒgƒ‹ ƒo[‚ÌƒeƒLƒXƒg
-TCHAR szWindowClass[MAX_LOADSTRING];			// ƒƒCƒ“ ƒEƒBƒ“ƒhƒE ƒNƒ‰ƒX–¼
+// ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°:
+HINSTANCE hInst;								// ç¾åœ¨ã®ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹
+TCHAR szTitle[MAX_LOADSTRING];					// ã‚¿ã‚¤ãƒˆãƒ« ãƒãƒ¼ã®ãƒ†ã‚­ã‚¹ãƒˆ
+TCHAR szWindowClass[MAX_LOADSTRING];			// ãƒ¡ã‚¤ãƒ³ ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ ã‚¯ãƒ©ã‚¹å
 
-// ‚±‚ÌƒR[ƒh ƒ‚ƒWƒ…[ƒ‹‚ÉŠÜ‚Ü‚ê‚éŠÖ”‚ÌéŒ¾‚ð“]‘—‚µ‚Ü‚·:
+// ã“ã®ã‚³ãƒ¼ãƒ‰ ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã«å«ã¾ã‚Œã‚‹é–¢æ•°ã®å®£è¨€ã‚’è»¢é€ã—ã¾ã™:
 ATOM				MyRegisterClass(HINSTANCE hInstance);
 BOOL				InitInstance(HINSTANCE, int);
 LRESULT CALLBACK	WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
 BOOL CALLBACK MoveWindow(HWND hWnd, LPARAM lParam);
 
-int count = 0; // ƒJƒEƒ“ƒ^
-double sinn[80], coss[40]; // —Í‹Z
+int count = 0; // ã‚«ã‚¦ãƒ³ã‚¿
+double sinn[80], coss[40]; // åŠ›æŠ€
 
 int APIENTRY _tWinMain(HINSTANCE hInstance,
                      HINSTANCE hPrevInstance,
@@ -31,22 +31,22 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
 
- 	// TODO: ‚±‚±‚ÉƒR[ƒh‚ð‘}“ü‚µ‚Ä‚­‚¾‚³‚¢B
+ 	// TODO: ã“ã“ã«ã‚³ãƒ¼ãƒ‰ã‚’æŒ¿å…¥ã—ã¦ãã ã•ã„ã€‚
 	MSG msg;
 	HACCEL hAccelTable;
 
-	if (MessageBox(NULL, L"–{ƒ\ƒtƒgƒEƒFƒA‚ðŽÀs‚·‚é‚ÆA‰æ–Êã‚Ì‚·‚×‚Ä‚ÌƒEƒBƒ“ƒhƒE‚ª“®‚«o‚µA\n"
-						 L"—\Šú‚µ‚È‚¢“®ì‚ðˆø‚«‹N‚±‚µ‚½‚èA“®ì‚ÉŽxá‚ð‚«‚½‚·‹°‚ê‚ª‚ ‚è‚Ü‚·B\n"
-						 L"‰E‰º‚Ìƒ^ƒXƒNƒgƒŒƒC‚ð‰EƒNƒŠƒbƒN‚±‚Æ‚ÅI—¹‚Å‚«‚Ü‚·‚ªA\n”O‚Ì‚½‚ßŽ–‘O‚Éƒ^ƒXƒNƒ}ƒl[ƒWƒƒ[‚ð‹N“®‚µ‚Ä‚¨‚­‚±‚Æ‚ð‹­‚­‚¨‚·‚·‚ß‚µ‚Ü‚·B\n\n"
-						 L"ŽÀs‚µ‚Ü‚·‚©H", L"!! WARNING !!", MB_YESNO | MB_ICONWARNING) == IDNO)
+	if (MessageBox(NULL, L"æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã‚’å®Ÿè¡Œã™ã‚‹ã¨ã€ç”»é¢ä¸Šã®ã™ã¹ã¦ã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ãŒå‹•ãå‡ºã—ã€\n"
+						 L"äºˆæœŸã—ãªã„å‹•ä½œã‚’å¼•ãèµ·ã“ã—ãŸã‚Šã€å‹•ä½œã«æ”¯éšœã‚’ããŸã™æã‚ŒãŒã‚ã‚Šã¾ã™ã€‚\n"
+						 L"å³ä¸‹ã®ã‚¿ã‚¹ã‚¯ãƒˆãƒ¬ã‚¤ã‚’å³ã‚¯ãƒªãƒƒã‚¯ã“ã¨ã§çµ‚äº†ã§ãã¾ã™ãŒã€\nå¿µã®ãŸã‚äº‹å‰ã«ã‚¿ã‚¹ã‚¯ãƒžãƒãƒ¼ã‚¸ãƒ£ãƒ¼ã‚’èµ·å‹•ã—ã¦ãŠãã“ã¨ã‚’å¼·ããŠã™ã™ã‚ã—ã¾ã™ã€‚\n\n"
+						 L"å®Ÿè¡Œã—ã¾ã™ã‹ï¼Ÿ", L"!! WARNING !!", MB_YESNO | MB_ICONWARNING) == IDNO)
 		return 0;
 
-	// ƒOƒ[ƒoƒ‹•¶Žš—ñ‚ð‰Šú‰»‚µ‚Ä‚¢‚Ü‚·B
+	// ã‚°ãƒ­ãƒ¼ãƒãƒ«æ–‡å­—åˆ—ã‚’åˆæœŸåŒ–ã—ã¦ã„ã¾ã™ã€‚
 	LoadString(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
 	LoadString(hInstance, IDC_LISAGE, szWindowClass, MAX_LOADSTRING);
 	MyRegisterClass(hInstance);
 
-	// ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ì‰Šú‰»‚ðŽÀs‚µ‚Ü‚·:
+	// ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®åˆæœŸåŒ–ã‚’å®Ÿè¡Œã—ã¾ã™:
 	if (!InitInstance (hInstance, nCmdShow))
 	{
 		return FALSE;
@@ -54,7 +54,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
 	hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_LISAGE));
 
-	// ƒe[ƒuƒ‹Ý’è
+	// ãƒ†ãƒ¼ãƒ–ãƒ«è¨­å®š
 	int i;
 		for (i = 0; i < 80; i++)
 		{
@@ -63,7 +63,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 				coss[i] = cos((double)i * 3.1415926535897932 / 20) * 4;
 		}
 
-	// ƒƒCƒ“ ƒƒbƒZ[ƒW ƒ‹[ƒv:
+	// ãƒ¡ã‚¤ãƒ³ ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒ«ãƒ¼ãƒ—:
 	while (1)
 	{
 		PeekMessage(&msg, NULL, 0, 0, PM_REMOVE);
@@ -76,9 +76,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
 		EnumWindows(MoveWindow, NULL);
 			count++;
-		Sleep(16);	//@ƒlƒ^‚à–³‚¢‚Ì‚ÅA¡“ú‚Í‚±‚Ì‚Ö‚ñ‚ÅI‚í‚è‚É‚µ‚æ‚¤‚©‚ÆŽv‚¢‚Ü‚·B
-					//@‚­‚¾‚ç‚È‚¢“à—e‚Å\‚µ–ó‚È‚¢‚Å‚·‚ªA‚²Ž‹’®‚Ç‚¤‚à‚ ‚è‚ª‚Æ‚¤‚²‚´‚¢‚Ü‚µ‚½B
-					//@ƒeƒƒbƒv‚Ì‘‚«Š·‚¦‰æ–Ê‚ª–ß‚Á‚Ä‚±‚È‚¢EEE
+		Sleep(16);
 	}
 
 	return (int) msg.wParam;
@@ -87,17 +85,17 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
 
 //
-//  ŠÖ”: MyRegisterClass()
+//  é–¢æ•°: MyRegisterClass()
 //
-//  –Ú“I: ƒEƒBƒ“ƒhƒE ƒNƒ‰ƒX‚ð“o˜^‚µ‚Ü‚·B
+//  ç›®çš„: ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ ã‚¯ãƒ©ã‚¹ã‚’ç™»éŒ²ã—ã¾ã™ã€‚
 //
-//  ƒRƒƒ“ƒg:
+//  ã‚³ãƒ¡ãƒ³ãƒˆ:
 //
-//    ‚±‚ÌŠÖ”‚¨‚æ‚ÑŽg‚¢•û‚ÍA'RegisterClassEx' ŠÖ”‚ª’Ç‰Á‚³‚ê‚½
-//    Windows 95 ‚æ‚è‘O‚Ì Win32 ƒVƒXƒeƒ€‚ÆŒÝŠ·‚³‚¹‚éê‡‚É‚Ì‚Ý•K—v‚Å‚·B
-//    ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ªAŠÖ˜A•t‚¯‚ç‚ê‚½
-//    ³‚µ‚¢Œ`Ž®‚Ì¬‚³‚¢ƒAƒCƒRƒ“‚ðŽæ“¾‚Å‚«‚é‚æ‚¤‚É‚·‚é‚É‚ÍA
-//    ‚±‚ÌŠÖ”‚ðŒÄ‚Ño‚µ‚Ä‚­‚¾‚³‚¢B
+//    ã“ã®é–¢æ•°ãŠã‚ˆã³ä½¿ã„æ–¹ã¯ã€'RegisterClassEx' é–¢æ•°ãŒè¿½åŠ ã•ã‚ŒãŸ
+//    Windows 95 ã‚ˆã‚Šå‰ã® Win32 ã‚·ã‚¹ãƒ†ãƒ ã¨äº’æ›ã•ã›ã‚‹å ´åˆã«ã®ã¿å¿…è¦ã§ã™ã€‚
+//    ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ãŒã€é–¢é€£ä»˜ã‘ã‚‰ã‚ŒãŸ
+//    æ­£ã—ã„å½¢å¼ã®å°ã•ã„ã‚¢ã‚¤ã‚³ãƒ³ã‚’å–å¾—ã§ãã‚‹ã‚ˆã†ã«ã™ã‚‹ã«ã¯ã€
+//    ã“ã®é–¢æ•°ã‚’å‘¼ã³å‡ºã—ã¦ãã ã•ã„ã€‚
 //
 ATOM MyRegisterClass(HINSTANCE hInstance)
 {
@@ -121,20 +119,20 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 }
 
 //
-//   ŠÖ”: InitInstance(HINSTANCE, int)
+//   é–¢æ•°: InitInstance(HINSTANCE, int)
 //
-//   –Ú“I: ƒCƒ“ƒXƒ^ƒ“ƒX ƒnƒ“ƒhƒ‹‚ð•Û‘¶‚µ‚ÄAƒƒCƒ“ ƒEƒBƒ“ƒhƒE‚ðì¬‚µ‚Ü‚·B
+//   ç›®çš„: ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ ãƒãƒ³ãƒ‰ãƒ«ã‚’ä¿å­˜ã—ã¦ã€ãƒ¡ã‚¤ãƒ³ ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ä½œæˆã—ã¾ã™ã€‚
 //
-//   ƒRƒƒ“ƒg:
+//   ã‚³ãƒ¡ãƒ³ãƒˆ:
 //
-//        ‚±‚ÌŠÖ”‚ÅAƒOƒ[ƒoƒ‹•Ï”‚ÅƒCƒ“ƒXƒ^ƒ“ƒX ƒnƒ“ƒhƒ‹‚ð•Û‘¶‚µA
-//        ƒƒCƒ“ ƒvƒƒOƒ‰ƒ€ ƒEƒBƒ“ƒhƒE‚ðì¬‚¨‚æ‚Ñ•\Ž¦‚µ‚Ü‚·B
+//        ã“ã®é–¢æ•°ã§ã€ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°ã§ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ ãƒãƒ³ãƒ‰ãƒ«ã‚’ä¿å­˜ã—ã€
+//        ãƒ¡ã‚¤ãƒ³ ãƒ—ãƒ­ã‚°ãƒ©ãƒ  ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ä½œæˆãŠã‚ˆã³è¡¨ç¤ºã—ã¾ã™ã€‚
 //
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    HWND hWnd;
 
-   hInst = hInstance; // ƒOƒ[ƒoƒ‹•Ï”‚ÉƒCƒ“ƒXƒ^ƒ“ƒXˆ—‚ðŠi”[‚µ‚Ü‚·B
+   hInst = hInstance; // ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°ã«ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹å‡¦ç†ã‚’æ ¼ç´ã—ã¾ã™ã€‚
 
    hWnd = CreateWindow(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, NULL, NULL, hInstance, NULL);
@@ -162,13 +160,13 @@ BOOL CALLBACK MoveWindow(HWND hWnd, LPARAM lParam)
 }
 
 //
-//  ŠÖ”: WndProc(HWND, UINT, WPARAM, LPARAM)
+//  é–¢æ•°: WndProc(HWND, UINT, WPARAM, LPARAM)
 //
-//  –Ú“I:  ƒƒCƒ“ ƒEƒBƒ“ƒhƒE‚ÌƒƒbƒZ[ƒW‚ðˆ—‚µ‚Ü‚·B
+//  ç›®çš„:  ãƒ¡ã‚¤ãƒ³ ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡¦ç†ã—ã¾ã™ã€‚
 //
-//  WM_COMMAND	- ƒAƒvƒŠƒP[ƒVƒ‡ƒ“ ƒƒjƒ…[‚Ìˆ—
-//  WM_PAINT	- ƒƒCƒ“ ƒEƒBƒ“ƒhƒE‚Ì•`‰æ
-//  WM_DESTROY	- ’†Ž~ƒƒbƒZ[ƒW‚ð•\Ž¦‚µ‚Ä–ß‚é
+//  WM_COMMAND	- ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®å‡¦ç†
+//  WM_PAINT	- ãƒ¡ã‚¤ãƒ³ ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®æç”»
+//  WM_DESTROY	- ä¸­æ­¢ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã—ã¦æˆ»ã‚‹
 //
 //
 NOTIFYICONDATA task;
@@ -194,7 +192,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_COMMAND:
 		wmId    = LOWORD(wParam);
 		wmEvent = HIWORD(wParam);
-		// ‘I‘ð‚³‚ê‚½ƒƒjƒ…[‚Ì‰ðÍ:
+		// é¸æŠžã•ã‚ŒãŸãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®è§£æž:
 		switch (wmId)
 		{
 		case IDM_ABOUT:
@@ -209,19 +207,19 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		break;
 	case WM_PAINT:
 		hdc = BeginPaint(hWnd, &ps);
-		// TODO: •`‰æƒR[ƒh‚ð‚±‚±‚É’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢...
+		// TODO: æç”»ã‚³ãƒ¼ãƒ‰ã‚’ã“ã“ã«è¿½åŠ ã—ã¦ãã ã•ã„...
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_TRAYICON:
 		if (lParam == WM_RBUTTONUP && wParam == 101)
 		{
-			// ƒ|ƒbƒvƒAƒbƒvƒƒjƒ…[‚ðo‚·
+			// ãƒãƒƒãƒ—ã‚¢ãƒƒãƒ—ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’å‡ºã™
 			POINT cursor;
 			HMENU hMenu = LoadMenu(hInst, (LPCTSTR)IDC_LISAGE);
 
 			GetCursorPos(&cursor);
 			SetForegroundWindow(hWnd);
-			TrackPopupMenu(GetSubMenu(hMenu, 0),		// ƒ|ƒbƒv‚¤‚
+			TrackPopupMenu(GetSubMenu(hMenu, 0),		// ãƒãƒƒãƒ—ã†ï½
 							TPM_BOTTOMALIGN, cursor.x, cursor.y,
 							0, hWnd, NULL);
 			DestroyMenu(hMenu);
@@ -237,7 +235,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
-// ƒo[ƒWƒ‡ƒ“î•ñƒ{ƒbƒNƒX‚ÌƒƒbƒZ[ƒW ƒnƒ“ƒhƒ‰[‚Å‚·B
+// ãƒãƒ¼ã‚¸ãƒ§ãƒ³æƒ…å ±ãƒœãƒƒã‚¯ã‚¹ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒãƒ³ãƒ‰ãƒ©ãƒ¼ã§ã™ã€‚
 INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	UNREFERENCED_PARAMETER(lParam);
