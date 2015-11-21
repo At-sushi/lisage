@@ -1,20 +1,28 @@
-// stdafx.h : •W€‚ÌƒVƒXƒeƒ€ ƒCƒ“ƒNƒ‹[ƒh ƒtƒ@ƒCƒ‹‚ÌƒCƒ“ƒNƒ‹[ƒh ƒtƒ@ƒCƒ‹A‚Ü‚½‚Í
-// QÆ‰ñ”‚ª‘½‚­A‚©‚Â‚ ‚Ü‚è•ÏX‚³‚ê‚È‚¢AƒvƒƒWƒFƒNƒgê—p‚ÌƒCƒ“ƒNƒ‹[ƒh ƒtƒ@ƒCƒ‹
-// ‚ğ‹Lq‚µ‚Ü‚·B
+// stdafx.h : æ¨™æº–ã®ã‚·ã‚¹ãƒ†ãƒ  ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ ãƒ•ã‚¡ã‚¤ãƒ«ã€ã¾ãŸã¯
+// å‚ç…§å›æ•°ãŒå¤šãã€ã‹ã¤ã‚ã¾ã‚Šå¤‰æ›´ã•ã‚Œãªã„ã€ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆå°‚ç”¨ã®ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ ãƒ•ã‚¡ã‚¤ãƒ«
+// ã‚’è¨˜è¿°ã—ã¾ã™ã€‚
+//
+// lisage Copyright (C) 2012 YUTOPER
+//
+// This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 
 #pragma once
 
 #include "targetver.h"
 
-// Windows ƒwƒbƒ_[ ƒtƒ@ƒCƒ‹:
+// Windows ãƒ˜ãƒƒãƒ€ãƒ¼ ãƒ•ã‚¡ã‚¤ãƒ«:
 #include <windows.h>
 
-// C ƒ‰ƒ“ƒ^ƒCƒ€ ƒwƒbƒ_[ ƒtƒ@ƒCƒ‹
+// C ãƒ©ãƒ³ã‚¿ã‚¤ãƒ  ãƒ˜ãƒƒãƒ€ãƒ¼ ãƒ•ã‚¡ã‚¤ãƒ«
 #include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
 
 
-// TODO: ƒvƒƒOƒ‰ƒ€‚É•K—v‚È’Ç‰Áƒwƒbƒ_[‚ğ‚±‚±‚ÅQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+// TODO: ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã«å¿…è¦ãªè¿½åŠ ãƒ˜ãƒƒãƒ€ãƒ¼ã‚’ã“ã“ã§å‚ç…§ã—ã¦ãã ã•ã„ã€‚
