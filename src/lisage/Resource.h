@@ -2,6 +2,14 @@
 // Microsoft Visual C++ generated include file.
 // Used by lisage.rc
 //
+// lisage Copyright (C) 2012 YUTOPER
+//
+// This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+//
 
 #define IDS_APP_TITLE			103
 
@@ -17,7 +25,7 @@
 #ifndef IDC_STATIC
 #define IDC_STATIC				-1
 #endif
-// 新しいオブジェクトの次の既定値
+// 譁ｰ縺励＞繧ｪ繝悶ず繧ｧ繧ｯ繝医�ｮ谺｡縺ｮ譌｢螳壼､
 //
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
