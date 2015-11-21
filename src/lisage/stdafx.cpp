@@ -1,8 +1,17 @@
-// stdafx.cpp : •W€ƒCƒ“ƒNƒ‹[ƒh lisage.pch ‚Ì‚İ‚ğ
-// ŠÜ‚Şƒ\[ƒX ƒtƒ@ƒCƒ‹‚ÍAƒvƒŠƒRƒ“ƒpƒCƒ‹Ï‚İƒwƒbƒ_[‚É‚È‚è‚Ü‚·B
-// stdafx.obj ‚É‚ÍƒvƒŠƒRƒ“ƒpƒCƒ‹Ï‚İŒ^î•ñ‚ªŠÜ‚Ü‚ê‚Ü‚·B
+// stdafx.cpp : æ¨™æº–ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ lisage.pch ã®ã¿ã‚’
+// å«ã‚€ã‚½ãƒ¼ã‚¹ ãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€ãƒ—ãƒªã‚³ãƒ³ãƒ‘ã‚¤ãƒ«æ¸ˆã¿ãƒ˜ãƒƒãƒ€ãƒ¼ã«ãªã‚Šã¾ã™ã€‚
+// stdafx.obj ã«ã¯ãƒ—ãƒªã‚³ãƒ³ãƒ‘ã‚¤ãƒ«æ¸ˆã¿å‹æƒ…å ±ãŒå«ã¾ã‚Œã¾ã™ã€‚
+//
+// lisage Copyright (C) 2012 YUTOPER
+//
+// This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+//
 
 #include "stdafx.h"
 
-// TODO: ‚±‚Ìƒtƒ@ƒCƒ‹‚Å‚Í‚È‚­ASTDAFX.H ‚Å•K—v‚È
-// ’Ç‰Áƒwƒbƒ_[‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+// TODO: ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã§ã¯ãªãã€STDAFX.H ã§å¿…è¦ãª
+// è¿½åŠ ãƒ˜ãƒƒãƒ€ãƒ¼ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
