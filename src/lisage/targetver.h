@@ -1,8 +1,16 @@
+// lisage Copyright (C) 2012 YUTOPER
+//
+// This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+//
 #pragma once
 
-// SDKDDKVer.h ‚ğƒCƒ“ƒNƒ‹[ƒh‚·‚é‚ÆA—˜—p‚Å‚«‚éÅ‚àãˆÊ‚Ì Windows ƒvƒ‰ƒbƒgƒtƒH[ƒ€‚ª’è‹`‚³‚ê‚Ü‚·B
+// SDKDDKVer.h ã‚’ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ã™ã‚‹ã¨ã€åˆ©ç”¨ã§ãã‚‹æœ€ã‚‚ä¸Šä½ã® Windows ãƒ—ãƒ©ãƒƒãƒˆãƒ•ã‚©ãƒ¼ãƒ ãŒå®šç¾©ã•ã‚Œã¾ã™ã€‚
 
-// ˆÈ‘O‚Ì Windows ƒvƒ‰ƒbƒgƒtƒH[ƒ€—p‚ÉƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ğƒrƒ‹ƒh‚·‚éê‡‚ÍAWinSDKVer.h ‚ğƒCƒ“ƒNƒ‹[ƒh‚µA
-// SDKDDKVer.h ‚ğƒCƒ“ƒNƒ‹[ƒh‚·‚é‘O‚ÉAƒTƒ|[ƒg‘ÎÛ‚Æ‚·‚éƒvƒ‰ƒbƒgƒtƒH[ƒ€‚ğ¦‚·‚æ‚¤‚É _WIN32_WINNT ƒ}ƒNƒ‚ğİ’è‚µ‚Ü‚·B
+// ä»¥å‰ã® Windows ãƒ—ãƒ©ãƒƒãƒˆãƒ•ã‚©ãƒ¼ãƒ ç”¨ã«ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ãƒ“ãƒ«ãƒ‰ã™ã‚‹å ´åˆã¯ã€WinSDKVer.h ã‚’ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ã—ã€
+// SDKDDKVer.h ã‚’ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ã™ã‚‹å‰ã«ã€ã‚µãƒãƒ¼ãƒˆå¯¾è±¡ã¨ã™ã‚‹ãƒ—ãƒ©ãƒƒãƒˆãƒ•ã‚©ãƒ¼ãƒ ã‚’ç¤ºã™ã‚ˆã†ã« _WIN32_WINNT ãƒã‚¯ãƒ­ã‚’è¨­å®šã—ã¾ã™ã€‚
 
 #include <SDKDDKVer.h>
